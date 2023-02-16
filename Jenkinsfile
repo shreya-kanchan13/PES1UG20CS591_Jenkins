@@ -9,7 +9,7 @@ pipeline{
        }
           stage ('Test') {
             steps {
-              sh  'cd main && ./a.exe'
+              sh  'cd main && ./a'
               eho 'Test Stage Successful'
             }
           }
