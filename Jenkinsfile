@@ -1,20 +1,20 @@
 pipeline{
   agent any
-  stages{
-    stage('Build){
+  stages {
+    stage('Build'){
           steps {
             sh 'cd main && g++ pipeline_591.cpp'
             echo 'Build Stage successful'
           }
-          }
-          stage ('Test'){
-            steps{
-              sh 'cd main && ./a.exe'
+       }
+          stage ('Test') {
+            steps {
+              sh  'cd main && ./a.exe'
               eho 'Test Stage Successful'
             }
           }
           }
-          post{
+  post {
             failure{
               echo 'Pipeline failed'
             }
