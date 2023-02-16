@@ -10,7 +10,7 @@ pipeline{
           stage ('Test') {
             steps {
               sh  'cd main && ./a'
-              eho 'Test Stage Successful'
+              echo 'Test Stage Successful'
             }
           }
           }
